@@ -1,0 +1,23 @@
+- @title= "All Articles"
+= paginate @trials
+%table{:id=>"pending-table", :width=>"100%"}
+  %tr{:style=>"color:black; background-color:#97BF60;"}
+    %th User
+    %th Title
+    %th Status
+    %th Created
+    %th Updated
+    %th Delete
+  - @trials.each do |trial|
+    %tr
+      %td= trial.user.code if trial.user
+      %td= link_to trial.title, :controller=>"trials", :action=>"show", :id=>trial.id
+      %td= trial.text
+      %td= trial.created_at
+      %td= trial.updated_at
+      %td(align='center')
+        - next unless login?
+        - unless current_ma_user.role.upcase.split(',').include?("A")
+          - next unless trial.user
+          - next unless current_ma_user == trial.user
+        = link_to image_tag('delete.png', style:'border:none; float:none;'), "#", :onclick=>"if (confirm('Please Confirm')) {location.hash='/trials/destroy/#{trial.id}';}"

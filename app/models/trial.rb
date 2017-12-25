@@ -4,9 +4,9 @@ class Trial
   # jinda begin
   include Mongoid::Timestamps
   field :title, :type => String
-  field :enrollment_start, :type => Date
-  field :enrollment_end, :type => Date
-  field :proposed, :type => Date
   field :status, :type => String
+  belongs_to :user
+  field :enrollmentstart, :type => Date
+  field :enrollmentend, :type => Date
   # jinda end
 end

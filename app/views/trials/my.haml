@@ -1,0 +1,20 @@
+- @title= "My Trials"
+%p
+- @page_title  = 'All Trials'
+%table#article-table
+  %tr
+    %th Title
+    %th Status
+    %th Created
+    %th Updated
+    %th Delete
+    %th Edit  
+  - @trials.each do |trial|
+    %tr
+      %td= link_to trial.title, :controller=>"trials", :action=>"show", :id=>trial.id
+      %td= trial.status.html_safe
+      %td= trial.created_at.strftime('%m/%d/%Y')
+      %td= trial.updated_at.strftime('%m/%d/%Y')
+      %td(align='center')= link_to image_tag('delete.png', style:'border:none; float:none;'), "#", :onclick=>"if (confirm('Please Confirm')) {location.hash='/trials/destroy/#{trial.id}';}"
+      %td(align='center')= link_to image_tag('pencil.png', style:'border:none; float:none;'), {controller: "jinda", action: "init", s: 'trials:xedit_trial', trial_id: trial.id}, data: { confirm: "Please Confirm" }
+

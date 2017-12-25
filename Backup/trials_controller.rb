@@ -7,13 +7,12 @@ class TrialsController < ApplicationController
 
   def show 
     prepare_meta_tags(title: @trial.title,
-                      status: @trial.status)
+                      status: @trial.text)
   end
 
   def edit
     @trial = Trial.find(params[:id])
     @page_title       = 'Member Login'
-    redirect_to :action=>'index'
 
   end
 
@@ -21,6 +20,7 @@ class TrialsController < ApplicationController
     @trial = Trial.new(
                       title: $xvars["form_trial"]["title"],
                       status: $xvars["form_trial"]["status"],
+
                       user_id: $xvars["user_id"])
     @trial.save!
   end
@@ -37,7 +37,7 @@ class TrialsController < ApplicationController
     trial_id = $xvars["select_trial"] ? $xvars["select_trial"]["title"] : $xvars["p"]["trial_id"]
     @trial = Trial.find(trial_id)
     @trial.update(title: $xvars["edit_trial"]["trial"]["title"],
-                  status: $xvars["edit_trial"]["trial"]["status"])
+                    status: $xvars["edit_trial"]["trial"]["status"])
 
   end
 
@@ -54,5 +54,8 @@ class TrialsController < ApplicationController
     @trial = Trial.find(params[:id])
   end
 
+  def load_comments
+    @comments = @trial.comments.find_all
+  end
 
 end

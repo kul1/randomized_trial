@@ -1,9 +1,9 @@
 # encoding: utf-8
 MM = "#{Rails.root}/app/jinda/index.mm"
-DEFAULT_TITLE = 'Jinda'
-DEFAULT_HEADER = 'Jinda'
-DEFAULT_DESCRIPTION = 'Rails Application Generator'
-DEFAULT_KEYWORDS = %w[Jinda Rails ruby Generator]
+DEFAULT_TITLE = 'Randomized Trial'
+DEFAULT_HEADER = 'Trial'
+DEFAULT_DESCRIPTION = 'Rails Application Generator Randomized Trial'
+DEFAULT_KEYWORDS = %w[Jinda Rails ruby Generator Randomized Trial]
 GMAP = false
 ADSENSE = true
 NEXT = "Next >"

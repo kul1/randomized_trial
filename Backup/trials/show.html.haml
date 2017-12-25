@@ -1,0 +1,11 @@
+- title @trial.title
+- status @trial.status
+
+%div{"data-role" => "menu_mm", "data-theme" => "b", "data-backbtn"=>"false"}
+  #trial-title= @trial.title
+
+#trial-text= @trial.status.html_safe
+
+= link_to image_tag('pencil.png', style:'border:none; float:none;'), {controller: "jinda", action: "init", s: 'trials:xedit_trial', trial_id: @trial.id}, data: { confirm: "Please Confirm" }
+
+
