@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'jinda', path: '/Users/kul/mygem/jinda'
+gem 'jinda', '~>0.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
@@ -57,7 +57,6 @@ gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'meta-tags'
 gem 'jquery-turbolinks'
-gem 'jquery-ui-rails'
 gem 'mongo', '~> 2.2'
 gem 'bson', '~> 4.0'
 gem 'mongoid', github: 'mongodb/mongoid'

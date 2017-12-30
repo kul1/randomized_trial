@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require jquery-ui/widgets/datepicker
 //= require jqm/jquery.mobile.splitview
 //= require jqm/jquery.mobile-1.2.1
 // require jqm/jquery.mobile.datebox
