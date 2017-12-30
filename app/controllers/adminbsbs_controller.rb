@@ -1,0 +1,2 @@
+class AdminbsbsController < ApplicationController
+end

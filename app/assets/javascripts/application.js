@@ -13,14 +13,16 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery-ui/widgets/datepicker
 //= require jqm/jquery.mobile.splitview
 //= require jqm/jquery.mobile-1.2.1
-//= require jqm/jquery.mobile.datebox
+// require jqm/jquery.mobile.datebox
 //= require jqm/iscroll-wrapper
 //= require jqm/iscroll
 //= require jqm/jinda
 //= require turbolinks
 //= require jqm/disable_enter_key.js
 //= require ckeditor/init
+//= require_tree .
 
 

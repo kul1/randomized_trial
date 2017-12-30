@@ -21,6 +21,8 @@ class TrialsController < ApplicationController
     @trial = Trial.new(
                       title: $xvars["form_trial"]["title"],
                       status: $xvars["form_trial"]["status"],
+                      estart: $xvars["form_trial"]["estart"],
+                      eend: $xvars["form_trial"]["eend"],
                       user_id: $xvars["user_id"])
     @trial.save!
   end

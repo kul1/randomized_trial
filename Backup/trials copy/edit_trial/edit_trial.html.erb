@@ -1,0 +1,9 @@
+<%
+  trial = Trial.find_by :id=> $xvars["select_trial"]["title"]
+%>
+<%= fields_for trial do |f| %>
+  <%= f.label :title, "Title" %>
+  <%= f.text_field :title %>
+  <%= f.label :status, "Status" %>
+  <%= f.text_field :status %>
+<% end %>
