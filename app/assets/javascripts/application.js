@@ -15,7 +15,7 @@
 //= require jquery_ujs
 //= require jqm/jquery.mobile.splitview
 //= require jqm/jquery.mobile-1.2.1
-// require jqm/jquery.mobile.datebox
+//= require jqm/jquery.mobile.datebox
 //= require jqm/iscroll-wrapper
 //= require jqm/iscroll
 //= require jqm/jinda
