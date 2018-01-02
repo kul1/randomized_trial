@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: https://github.com/kul1/jinda.git
-  revision: 47cedf67bf4769aa3f9cdc0d57a637a3bf8b8fdd
+  revision: 0d6385042a3fbf090f957afbda7a191d3aa53312
   specs:
     jinda (0.1.0)
 
