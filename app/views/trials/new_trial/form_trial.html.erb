@@ -5,9 +5,9 @@
   <%= f.label :title, "Title" %>
   <%= f.text_field :title %>
   <%= f.label :estart, "Start Date" %>
-  <%= f.date_field :estart %>
+  <%= f.text_field :estart %>
   <%= f.label :eend, "End Date" %>  
-  <%= f.date_field :eend %>
+  <%= f.text_field :eend %>
   <%= f.label :status, "Status" , :class=>"ui-input-text" %>
   <%= f.select :status, [['Open','Open'],['Pending','Pending'],['Schedule','Schedule']],{},"data-native-menu"=>"false" %>
 <% end %>
