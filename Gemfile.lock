@@ -22,6 +22,11 @@ GIT
       activemodel (~> 5.1)
       mongo (>= 2.4.1, < 3.0.0)
 
+PATH
+  remote: /Users/kul/mygem/jinda
+  specs:
+    jinda (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -130,7 +135,6 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    jinda (0.1.0)
     jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -347,7 +351,7 @@ DEPENDENCIES
   haml!
   haml-rails
   jbuilder (~> 2.5)
-  jinda (~> 0.1.0)
+  jinda!
   jquery-rails
   jquery-turbolinks
   kaminari

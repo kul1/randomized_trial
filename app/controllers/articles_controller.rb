@@ -24,6 +24,7 @@ class ArticlesController < ApplicationController
                       text: $xvars["form_article"]["text"],
                       keywords: $xvars["form_article"]["keywords"],
                       body: $xvars["form_article"]["body"],
+
                       user_id: $xvars["user_id"])
     @article.save!
   end

@@ -1,12 +1,23 @@
+%h1 Show Trials Information
+-trial = @trial
+%table#table
+  %thead
+    %tr
+      %th Title
+      %th Estart
+      %th Eend
+      %th Status
+      %th
+      %th
+      %th
 
-- title @trial.title
+  %tbody#body
+    %tr
+      %td= trial.title
+      %td= trial.estart
+      %td= trial.eend
+      %td= trial.status
 
-%div{"data-role" => "menu_mm", "data-theme" => "b", "data-backbtn"=>"false"}
+%br
 
-  #article-title= @trial.title
-
-#article-text= @trial.status.html_safe
-
-= link_to image_tag('pencil.png', style:'border:none; float:none;'), {controller: "jinda", action: "init", s: 'trials:xedit_trial', trial_id: @trial.id}, data: { confirm: "Please Confirm" }
-
-
+=# link_to 'New Simple', new_trial_path

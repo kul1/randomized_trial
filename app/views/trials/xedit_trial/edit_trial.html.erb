@@ -1,7 +1,5 @@
-
-<%- @title= 'New Trial' %>
 <%
-  trial = @trial
+  trial = Trial.find_by :id=> $xvars["p"]["trial_id"]
 %>
 <%= fields_for trial do |f| %>
   <%= f.label :title, "Title" %>
@@ -10,6 +8,8 @@
   <%= f.text_field :estart,"data-role"=>"datebox" %>
   <%= f.label :eend, "Enrollment End" %>
   <%= f.text_field :eend,"data-role"=>"datebox" %>
-  <%= f.label :status, "Status" , :class=>"ui-input-text" %>
+  <%= f.label :estatus, "Status" , :class=>"ui-input-text" %>
   <%= f.select :status, [['Open',0],['Pending',1],['Schedule',2]],{},"data-native-menu"=>"false" %>
 <% end %>
+
+

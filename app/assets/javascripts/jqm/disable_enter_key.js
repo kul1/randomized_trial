@@ -7,6 +7,4 @@ $(function() {
       return false;
     }
   });
-    $('#trial_eend').datepicker
-    dateFormat: 'yy-mm-dd'
 })

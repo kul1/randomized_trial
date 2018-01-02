@@ -10,5 +10,6 @@ class Article
   validates :title, :text, :user_id, presence: true
   field :body, :type => String
   field :keywords, :type => String
+  field :released, :type => Date
   # jinda end
 end

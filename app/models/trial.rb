@@ -5,8 +5,8 @@ class Trial
   include Mongoid::Timestamps
   field :title, :type => String
   field :status, :type => String
+  belongs_to :user
   field :estart, :type => Date
   field :eend, :type => Date
-  belongs_to :user
   # jinda end
 end

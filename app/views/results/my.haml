@@ -4,17 +4,17 @@
 %table#result-table
   %tr
     %th Title
-    %th Member
-    %th Enroll-Start
-    %th Enroll-End
+    %th Status
+    %th Created
+    %th Updated
     %th Delete
-    %th Edit  
+    %th Edit
   - @results.each do |result|
     %tr
       %td= link_to result.title, :controller=>"results", :action=>"show", :id=>result.id
-      %td= result.user
-      %td= result.trial.estart
-      %td= result.trial.eend
+      %td= result.text.html_safe
+      %td= result.created_at.strftime('%m/%d/%Y')
+      %td= result.updated_at.strftime('%m/%d/%Y')
       %td(align='center')= link_to image_tag('delete.png', style:'border:none; float:none;'), "#", :onclick=>"if (confirm('Please Confirm')) {location.hash='/results/destroy/#{result.id}';}"
       %td(align='center')= link_to image_tag('pencil.png', style:'border:none; float:none;'), {controller: "jinda", action: "init", s: 'results:xedit_result', result_id: result.id}, data: { confirm: "Please Confirm" }
 
