@@ -9,5 +9,5 @@
   <%= f.label :eend, "Enrollment End" %>
   <%= f.date_field :eend %>
   <%= f.label :status, "Status" , :class=>"ui-input-text" %>
-  <%= f.select :status, [['Open',0],['Pending',1],['Schedule',2]],{},"data-native-menu"=>"false" %>
+  <%= f.select :status, [['Open','Open'],['Pending','Pending'],['Schedule','Schedule']],{},"data-native-menu"=>"false" %>
 <% end %>
