@@ -10,6 +10,5 @@ class Person
   field :dob, :type => Date
   field :phone, :type => String
   field :photo, :type => String
-  field :phone_alt, :type => String
   # jinda end
 end
