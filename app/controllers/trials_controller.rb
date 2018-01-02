@@ -21,10 +21,10 @@ class TrialsController < ApplicationController
 
   def create
     @trial = Trial.new(
-        title: $xvars["form_trial"]["title"],
-        status: $xvars["form_trial"]["status"],
-        estart: $xvars["form_trial"]["estart"],
-        eend: $xvars["form_trial"]["eend"],
+        title: $xvars["form_trial"]["trial"]["title"],
+        status: $xvars["form_trial"]["trial"]["status"],
+        estart: $xvars["form_trial"]["trial"]["estart"],
+        eend: $xvars["form_trial"]["trial"]["eend"],
         user_id: $xvars["user_id"])
     @trial.save!
 

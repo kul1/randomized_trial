@@ -5,11 +5,11 @@
   <%= f.label :title, "Title" %>
   <%= f.text_field :title %>
   <%= f.label :estart, "Enrollment Start" %>
-  <%= f.text_field :estart %>
+  <%= f.date_field :estart %>
   <%= f.label :eend, "Enrollment End" %>
-  <%= f.text_field :eend %>
+  <%= f.date_field :eend %>
   <%= f.label :status, "Status" , :class=>"ui-input-text" %>
-  <%= f.select :status, [['Open',0],['Pending',1],['Schedule',2]],{},"data-native-menu"=>"false" %>
+  <%= f.select :status, [['Open','Open'],['Pending','Pending'],['Schedule','Schedule']],{},"data-native-menu"=>"false" %>
 <% end %>
 
 
